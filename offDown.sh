@@ -2,8 +2,8 @@ wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/we
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
-apt install zip
-apt install aria2
+apt install zip  > /dev/null
+apt install aria2 > /dev/null
 
 unzip web.zip
 mv web ~/
@@ -23,5 +23,5 @@ systemctl enable aria2.service && systemctl start aria2.service
 
 caddy & disown
 
-bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)  > /dev/null
 
