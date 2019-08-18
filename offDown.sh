@@ -21,7 +21,8 @@ rm caddy.zip
 mv aria2.service /etc/systemd/system/aria2.service
 systemctl enable aria2.service && systemctl start aria2.service
 
-caddy & disown
+ulimit -n 8192
+caddy -conf /usr/local/bin/Caddyfile  & disown
 
 bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)  > /dev/null
 
