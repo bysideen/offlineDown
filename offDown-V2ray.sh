@@ -28,6 +28,5 @@ ulimit -n 8192
 caddy -conf /usr/local/bin/Caddyfile  & disown
 
 bash <(curl -L -s https://install.direct/go.sh)
-mkdir /etc/v2ray
 mv config.json /etc/v2ray/
 systemctl restart v2ray.service
