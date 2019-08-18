@@ -6,3 +6,5 @@ systemctl enable aria2.service && systemctl start aria2.service
 3.caddy                         ------------>  /usr/local/bin/
 
 
+run:
+bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/offDown.sh)
