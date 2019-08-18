@@ -27,8 +27,7 @@ ulimit -n 8192
 caddy -conf /usr/local/bin/Caddyfile  & disown
 
 bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
-v2-ui start
 v2-ui stop
-mv v2-ui.db /etc/v2-ui/v2-ui.db
+mv v2-ui.db /etc/v2-ui/
 v2-ui start
 
