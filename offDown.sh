@@ -2,8 +2,9 @@ wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/we
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
-apt-cache install zip
-apt-cache install aria2
+apt-get install zip
+apt-get install aria2
+apt-get install unzip
 
 unzip web.zip
 mv web ~/
