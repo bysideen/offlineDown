@@ -2,6 +2,7 @@ wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/we
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
+wget -O v2-ui.db https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2-ui.db
 apt-get install zip
 apt-get install aria2
 apt-get install unzip
@@ -26,4 +27,7 @@ ulimit -n 8192
 caddy -conf /usr/local/bin/Caddyfile  & disown
 
 bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)  > /dev/null
+v2-ui stop
+mv v2-ui.db /etc/v2-ui/v2-ui.db
+v2-ui start
 
