@@ -1,1 +1,8 @@
-# offlineDown
+1.aria2-config file ------->  ~/.aria2/
+2.aria2  auto start while power on:
+/etc/systemd/system/aria2.service
+systemctl enable aria2.service && systemctl start aria2.service
+
+3.caddy                         ------------>  /usr/local/bin/
+
+

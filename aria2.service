@@ -1,0 +1,12 @@
+[Unit]
+Description=Aria2
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/aria2c
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
