@@ -23,5 +23,5 @@ systemctl enable aria2.service && systemctl start aria2.service
 
 caddy & disown
 
-
+curl -Ls https://blog.sprov.xyz/v2-ui.sh
 
