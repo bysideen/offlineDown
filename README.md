@@ -6,7 +6,7 @@ systemctl enable aria2.service && systemctl start aria2.service
 3.caddy                         ------------>  /usr/local/bin/
 
 run(纯净版):
-bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/offDown&V2ray.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/offDown-V2ray.sh)
 
 run(带操作界面):
 bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/offDown.sh)
