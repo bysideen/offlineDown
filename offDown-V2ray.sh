@@ -8,6 +8,7 @@ wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
 wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/master/config.json
 
+apt-get update
 apt-get install zip
 apt-get install aria2
 apt-get install unzip
