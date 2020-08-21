@@ -17,5 +17,5 @@ bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/of
 
 run(客户端v2ray+透明路由):
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/tproxy/v2ray-C-tproxy.sh)
+bash <(curl -Ls https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/tproxy/v2rayC_tproxy.sh)
 ```
