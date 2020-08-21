@@ -1,4 +1,3 @@
-export https_proxy=http://127.0.0.1:8080 http_proxy=http://127.0.0.1:8080 all_proxy=socks5://127.0.0.1:1080
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
