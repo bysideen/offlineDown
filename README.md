@@ -15,7 +15,8 @@ run(带操作界面):
 bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/offDown.sh)
 ```
 
-run(客户端v2ray+透明路由):
+run(客户端v2ray+透明路由):  注:国内不用翻墙，可直接将raw.githubusercontent.com的ip映射到/etc/hosts
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/tproxy/v2rayC_tproxy.sh)
 ```
+
