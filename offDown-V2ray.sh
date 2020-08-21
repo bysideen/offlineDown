@@ -6,7 +6,10 @@ wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/we
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
-wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/master/config.json
+
+wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/config.json
+wget -O v2ray.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/v2ray.service
+wget -O v2ray-linux-64.zip https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/v2ray-linux-64.zip
 
 apt-get update
 apt-get install zip
@@ -32,6 +35,17 @@ systemctl enable aria2.service && systemctl start aria2.service
 ulimit -n 8192
 caddy -conf /usr/local/bin/Caddyfile  & disown
 
-bash <(curl -L -s https://install.direct/go.sh)
+unzip v2ray-linux-64.zip
+rm v2ray-linux-64.zip
+mkdir /usr/bin/v2ray
+chmod +x v2ray v2ctl
+mv v2ray /usr/bin/v2ray/v2ray
+mv v2ctl /usr/bin/v2ray/v2ctl
+mkdir /etc/v2ray
+mkdir /var/log/v2ray
 mv config.json /etc/v2ray/
-systemctl restart v2ray.service
+mv geoip.dat /usr/bin/v2ray/geoip.dat
+mv geosite.dat  /usr/bin/v2ray/geosite.dat
+mv v2ray.service /etc/systemd/system/v2ray.service
+systemctl enable v2ray.service
+systemctl start v2ray.service
