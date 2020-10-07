@@ -16,7 +16,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/of
 ```
 
 run(客户端v2ray+透明路由):  
-注1:国内不用翻墙，可直接将raw.githubusercontent.com的ip映射到/etc/hosts
+注1:国内不用翻墙，可直接将raw.githubusercontent.com及github.com的ip映射到/etc/hosts                          
 注2：需要设置静态地址作为其他需翻墙设备的网关，最后重启生效。
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/tproxy/v2rayC_tproxy.sh)
