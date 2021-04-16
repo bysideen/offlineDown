@@ -6,7 +6,7 @@ systemctl enable aria2.service && systemctl start aria2.service
 
 3.caddy                         ------------>  /usr/local/bin/
 
-4.做bt种子示例：transmission-create -o fileName.torrent -t tracker1.com -t tracker2.com fileName
+4.做bt种子示例：transmission-create -o fileName.torrent -t tracker1.com -t tracker2.com fileName    ------> VPS在源文件目录位置尝试用该bt种子下载源文件，经过check-integrity之后判断下载完成，随后开始seeding.
 
 run(纯净版):
 ```
