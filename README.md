@@ -1,9 +1,12 @@
 1.aria2-config file ------->  ~/.aria2/
+
 2.aria2  auto start while power on:
 /etc/systemd/system/aria2.service
 systemctl enable aria2.service && systemctl start aria2.service
 
 3.caddy                         ------------>  /usr/local/bin/
+
+4.做bt种子示例：transmission-create -o fileName.torrent -t tracker1.com -t tracker2.com fileName
 
 run(纯净版):
 ```
