@@ -11,10 +11,10 @@ wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/maste
 wget -O v2ray.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/v2ray.service
 wget -O v2ray-linux-64.zip https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/v2ray-linux-64.zip
 
-apt-get update
-apt-get install zip
-apt-get install aria2
-apt-get install unzip
+sudo apt-get update
+sudo apt-get -y install zip
+sudo apt-get -y install aria2
+sudo apt-get -y install unzip
 
 unzip web.zip
 mv web ~/
