@@ -15,6 +15,14 @@ wget -O config.yaml https://raw.githubusercontent.com/GuNanHai/offlineDown/maste
 wget -O webdav https://github.com/GuNanHai/offlineDown/blob/master/webdav/webdav.bin
 wget -O webdav.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/webdav/webdav.service
 
+wget -O sshd_config https://raw.githubusercontent.com/GuNanHai/offlineDown/master/systemInitConf/sshd_config
+wget -O 50-default.conf https://raw.githubusercontent.com/GuNanHai/offlineDown/master/systemInitConf/50-default.conf
+
+mv 50-default.conf /etc/rsyslog.d/50-default.conf
+mv sshd_config /etc/ssh/sshd_config
+service ssh restart
+service rsyslog restart
+
 mv webdav /usr/bin/webdav
 mv webdav.service  /etc/systemd/system/webdav.service
 systemctl enable webdav.service && systemctl start webdav.service
