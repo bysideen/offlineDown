@@ -1,0 +1,18 @@
+# Server related settings
+address: 0.0.0.0
+port: 8558
+auth: true
+tls: false
+cert: cert.pem
+key: key.pem
+# Default user settings (will be merged)
+scope: .
+modify: true
+rules: []
+users:
+- username: admin2
+  password: admin2
+  scope: /root/web/down
+- username: admin
+  password: admin
+  scope: /root/web/down
