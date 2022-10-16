@@ -12,7 +12,7 @@ wget -O v2ray.service https://raw.githubusercontent.com/GuNanHai/offlineDown/mas
 wget -O v2ray-linux-64.zip https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/v2ray-linux-64.zip
 
 wget -O config.yaml https://raw.githubusercontent.com/GuNanHai/offlineDown/master/webdav/config.yaml
-wget -O webdav https://github.com/GuNanHai/offlineDown/blob/master/webdav/webdav.bin
+wget -O webdav https://raw.githubusercontent.com/GuNanHai/offlineDown/master/webdav/webdav.txt
 wget -O webdav.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/webdav/webdav.service
 
 wget -O sshd_config https://raw.githubusercontent.com/GuNanHai/offlineDown/master/systemInitConf/sshd_config
