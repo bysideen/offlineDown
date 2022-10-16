@@ -1,6 +1,6 @@
 # Server related settings
 address: 0.0.0.0
-port: 8558
+port: 8001
 auth: true
 tls: false
 cert: cert.pem
