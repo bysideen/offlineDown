@@ -11,6 +11,15 @@ wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/maste
 wget -O v2ray.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/v2ray.service
 wget -O v2ray-linux-64.zip https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/v2ray-linux-64.zip
 
+wget -O config.yaml https://raw.githubusercontent.com/GuNanHai/offlineDown/master/webdav/config.yaml
+wget -O webdav https://github.com/GuNanHai/offlineDown/blob/master/webdav/webdav.bin
+wget -O webdav.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/webdav/webdav.service
+
+mv webdav /usr/bin/webdav
+mv webdav.service  /etc/systemd/system/webdav.service
+systemctl enable webdav.service && systemctl start webdav.service
+
+
 sudo apt-get update
 sudo apt-get -y install zip
 sudo apt-get -y install aria2
