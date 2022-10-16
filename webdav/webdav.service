@@ -1,0 +1,12 @@
+[Unit]
+Description=webdav
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/webdav -c /root/config.yaml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
