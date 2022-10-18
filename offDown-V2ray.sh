@@ -25,6 +25,19 @@ sudo apt-get -y install zip
 sudo apt-get -y install aria2
 sudo apt-get -y install unzip
 
+mv 50-default.conf /etc/rsyslog.d/50-default.conf
+mv sshd_config /etc/ssh/sshd_config
+service ssh restart
+service rsyslog restart
+
+chmod +x webdav
+mv webdav /usr/bin/webdav
+mv webdav.service  /etc/systemd/system/webdav.service
+systemctl enable webdav.service && systemctl start webdav.service
+
+
+
+
 unzip web.zip
 mv web ~/
 rm web.zip
@@ -58,16 +71,5 @@ mv geosite.dat  /usr/bin/v2ray/geosite.dat
 mv v2ray.service /etc/systemd/system/v2ray.service
 systemctl enable v2ray.service
 systemctl start v2ray.service
-
-
-mv 50-default.conf /etc/rsyslog.d/50-default.conf
-mv sshd_config /etc/ssh/sshd_config
-service ssh restart
-service rsyslog restart
-
-chmod +x webdav
-mv webdav /usr/bin/webdav
-mv webdav.service  /etc/systemd/system/webdav.service
-systemctl enable webdav.service && systemctl start webdav.service
 
 
