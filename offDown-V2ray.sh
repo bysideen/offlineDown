@@ -18,15 +18,6 @@ wget -O webdav.service https://raw.githubusercontent.com/GuNanHai/offlineDown/ma
 wget -O sshd_config https://raw.githubusercontent.com/GuNanHai/offlineDown/master/systemInitConf/sshd_config
 wget -O 50-default.conf https://raw.githubusercontent.com/GuNanHai/offlineDown/master/systemInitConf/50-default.conf
 
-mv 50-default.conf /etc/rsyslog.d/50-default.conf
-mv sshd_config /etc/ssh/sshd_config
-service ssh restart
-service rsyslog restart
-
-chmod +x webdav
-mv webdav /usr/bin/webdav
-mv webdav.service  /etc/systemd/system/webdav.service
-systemctl enable webdav.service && systemctl start webdav.service
 
 
 sudo apt-get update
@@ -67,3 +58,16 @@ mv geosite.dat  /usr/bin/v2ray/geosite.dat
 mv v2ray.service /etc/systemd/system/v2ray.service
 systemctl enable v2ray.service
 systemctl start v2ray.service
+
+
+mv 50-default.conf /etc/rsyslog.d/50-default.conf
+mv sshd_config /etc/ssh/sshd_config
+service ssh restart
+service rsyslog restart
+
+chmod +x webdav
+mv webdav /usr/bin/webdav
+mv webdav.service  /etc/systemd/system/webdav.service
+systemctl enable webdav.service && systemctl start webdav.service
+
+
