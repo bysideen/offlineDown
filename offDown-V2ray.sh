@@ -48,7 +48,7 @@ systemctl enable webdav.service && systemctl start webdav.service
 unzip web.zip
 mv web ~/
 rm web.zip
-echo "export PATH=$PATH:/root/web/down" >> ~/.bashrc
+echo "export PATH=$PATH:/root/web/down/daily_stock/fileHost/CMDs" >> ~/.bashrc
 source ~/.bashrc
 
 unzip aria2c.zip
