@@ -1,8 +1,7 @@
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
-echo "export PATH=$PATH:/root/web/down/daily_stock/fileHost/CMDs" >> ~/.bashrc
-source ~/.bashrc
+
 
 wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/web.zip
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
@@ -26,6 +25,12 @@ sudo apt-get update
 sudo apt-get -y install zip
 sudo apt-get -y install aria2
 sudo apt-get -y install unzip
+sudo apt-get -y install git
+
+git config --global user.email "bysideen@gmail.com"
+git config --global user.name "bysideen"
+
+
 
 mv 50-default.conf /etc/rsyslog.d/50-default.conf
 mv sshd_config /etc/ssh/sshd_config
@@ -43,6 +48,8 @@ systemctl enable webdav.service && systemctl start webdav.service
 unzip web.zip
 mv web ~/
 rm web.zip
+echo "export PATH=$PATH:/root/web/down" >> ~/.bashrc
+source ~/.
 
 unzip aria2c.zip
 mv .aria2 ~/
