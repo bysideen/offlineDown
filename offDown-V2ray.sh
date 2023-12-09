@@ -49,7 +49,7 @@ unzip web.zip
 mv web ~/
 rm web.zip
 echo "export PATH=$PATH:/root/web/down" >> ~/.bashrc
-source ~/.
+source ~/.bashrc
 
 unzip aria2c.zip
 mv .aria2 ~/
