@@ -48,6 +48,8 @@ systemctl enable webdav.service && systemctl start webdav.service
 unzip web.zip
 mv web ~/
 rm web.zip
+
+mkdir -p /root/web/down/daily_stock/fileHost/CMDs
 echo "export PATH=$PATH:/root/web/down/daily_stock/fileHost/CMDs" >> ~/.bashrc
 source ~/.bashrc
 
