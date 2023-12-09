@@ -7,7 +7,7 @@
   "inbound": {
     "port": 18888,
     "protocol": "vmess",
-    //"streamSettings":{"network":"kcp"},
+    "streamSettings":{"network":"kcp"},
     "settings": {
       "clients": [
         {
