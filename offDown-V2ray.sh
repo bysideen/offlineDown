@@ -50,6 +50,8 @@ mv web ~/
 rm web.zip
 
 echo "export PATH=$PATH:/root/web/down/daily_stock/fileHost/CMDs" >> ~/.bashrc
+echo "export SYNC_USER1=bysideen:bysideen" >> ~/.bashrc
+echo "export SYNC_BASE=/root/web/down/daily_stock/fileHost/anki" >> ~/.bashrc
 source ~/.bashrc
 
 unzip aria2c.zip
@@ -82,4 +84,6 @@ mv v2ray.service /etc/systemd/system/v2ray.service
 systemctl enable v2ray.service
 systemctl start v2ray.service
 
+pip3 install anki
+python3 -m anki.syncserver & disown
 
