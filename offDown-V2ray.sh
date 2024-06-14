@@ -52,6 +52,7 @@ rm web.zip
 echo "export PATH=$PATH:/root/web/down/daily_stock/fileHost/CMDs" >> ~/.bashrc
 echo "export SYNC_USER1=bysideen:bysideen" >> ~/.bashrc
 echo "export SYNC_BASE=/root/web/down/daily_stock/fileHost/anki" >> ~/.bashrc
+echo "export SYNC_PORT=8002" >> ~/.bashrc
 source ~/.bashrc
 
 unzip aria2c.zip
