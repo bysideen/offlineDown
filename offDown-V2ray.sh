@@ -85,6 +85,4 @@ mv v2ray.service /etc/systemd/system/v2ray.service
 systemctl enable v2ray.service
 systemctl start v2ray.service
 
-pip3 install anki
-python3 -m anki.syncserver & disown
 
