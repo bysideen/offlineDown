@@ -71,6 +71,7 @@ caddy -conf /usr/local/bin/Caddyfile  & disown
 
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 mv config.json /usr/local/etc/xray/config.json
+systemctl restart xray.service
 
 
 
