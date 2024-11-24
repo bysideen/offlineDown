@@ -1,82 +1,29 @@
+
+
+
+
 {
-  "log": {
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
-    "loglevel": "warning"
-  },
-  "inbound": {
-    "port": 18888,
-    "protocol": "vmess",
-    "streamSettings":{"network":"kcp"},
-    "settings": {
-      "clients": [
-        {
-          "id": "61794536-9600-4650-9e7e-a8880385dc6b", //需要修改  mobile
-          "level": 1,
-          "alterId": 64
-        },
-        {
-          "id": "875e77f9-d17c-4355-9ae0-e62303e07206", //需要修改  ----PC
-          "level": 1,
-          "alterId": 64
-        },
-        {
-          "id": "1b16d797-b536-44d0-9542-39e03dd42378", //需要修改    ----Guest
-          "level": 1,
-          "alterId": 64
-        }
-      ]
-    }
-  },
-  "inboundDetour": [
+  "inbounds": [
     {
-      "protocol": "shadowsocks",
-      "port": 1001,
+      "port": 10086, // 服务器监听端口
+      "protocol": "vmess",
       "settings": {
-        "address": "0.0.0.0",
-        "method": "aes-256-gcm",
-        "password": "bysideen" //需要修改
+        "clients": [
+          {
+            "id": "875e77f9-d17c-4355-9ae0-e62303e07206"  // 记得替换这个字段，使用 `xray uuid` 或 `uuidgen` 生成
+          }
+        ]
       }
     }
   ],
-
-  "outbound": {
-    "protocol": "freedom",
-    "settings": {}
-  },
-  "outboundDetour": [
+  "outbounds": [
     {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
+      "protocol": "freedom"
     }
-  ],
-  "routing": {
-    "strategy": "rules",
-    "settings": {
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "0.0.0.0/8",
-            "10.0.0.0/8",
-            "100.64.0.0/10",
-            "127.0.0.0/8",
-            "169.254.0.0/16",
-            "172.16.0.0/12",
-            "192.0.0.0/24",
-            "192.0.2.0/24",
-            "192.168.0.0/16",
-            "198.18.0.0/15",
-            "198.51.100.0/24",
-            "203.0.113.0/24",
-            "::1/128",
-            "fc00::/7",
-            "fe80::/10"
-          ],
-          "outboundTag": "blocked"
-        }
-      ]
-    }
-  }
+  ]
 }
+
+
+
+
+
