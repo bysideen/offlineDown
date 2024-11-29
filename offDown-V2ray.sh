@@ -36,10 +36,6 @@ mv sshd_config /etc/ssh/sshd_config
 service ssh restart
 service rsyslog restart
 
-chmod +x webdav
-mv webdav /usr/bin/webdav
-mv webdav.service  /etc/systemd/system/webdav.service
-systemctl enable webdav.service && systemctl start webdav.service
 
 
 
@@ -72,6 +68,11 @@ caddy -conf /usr/local/bin/Caddyfile  & disown
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 mv config.json /usr/local/etc/xray/config.json
 systemctl restart xray.service
+
+chmod +x webdav
+mv webdav /usr/bin/webdav
+mv webdav.service  /etc/systemd/system/webdav.service
+systemctl enable webdav.service && systemctl start webdav.service
 
 
 
