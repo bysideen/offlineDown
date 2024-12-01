@@ -3,4 +3,7 @@
  timeouts none
  gzip
  filebrowser /browse /root/web/down
+
+ #use ip:8000/down/  to accee file directly
+ browse
 }
