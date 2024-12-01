@@ -1,0 +1,6 @@
+:8000 {
+ root /root/web
+ timeouts none
+ gzip
+ filebrowser /browse /root/web/down
+}
