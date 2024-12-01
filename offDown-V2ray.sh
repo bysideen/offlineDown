@@ -67,6 +67,7 @@ mv .aria2 ~/
 rm aria2c.zip
 
 unzip caddy.zip
+chmod +x caddy
 mv caddy /usr/local/bin/
 mv Caddyfile /usr/local/bin/
 rm caddy.zip
