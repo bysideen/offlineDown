@@ -46,8 +46,8 @@ service rsyslog restart
 chmod +x webdav
 mv webdav /usr/bin/webdav
 mv webdav.service  /etc/systemd/system/webdav.service
-systemctl enable webdav.service && systemctl start webdav.service
-
+systemctl enable webdav.service  
+systemctl start webdav.service &
 
 
 
