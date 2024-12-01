@@ -8,6 +8,7 @@ wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
 
 wget -O Caddyfile https://raw.githubusercontent.com/GuNanHai/offlineDown/master/Caddyfile
+wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 
 
 wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/config.json
@@ -69,6 +70,7 @@ rm aria2c.zip
 mv aria2.service /etc/systemd/system/aria2.service
 systemctl enable aria2.service && systemctl start aria2.service
 
+unzip caddy.zip
 mv Caddyfile /etc/caddy/Caddyfile
 systemctl restart caddy
 
