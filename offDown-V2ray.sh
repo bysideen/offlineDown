@@ -66,15 +66,16 @@ unzip aria2c.zip
 mv .aria2 ~/
 rm aria2c.zip
 
+unzip caddy.zip
+mv caddy /usr/local/bin/
+mv Caddyfile /usr/local/bin/
+rm caddy.zip
 
 mv aria2.service /etc/systemd/system/aria2.service
 systemctl enable aria2.service && systemctl start aria2.service
 
-unzip caddy.zip
-mv Caddyfile /etc/caddy/Caddyfile
-systemctl restart caddy
-
-
+ulimit -n 8192
+caddy -conf /usr/local/bin/Caddyfile  & disown
 
 
 
