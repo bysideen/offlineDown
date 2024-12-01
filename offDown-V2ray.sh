@@ -7,7 +7,6 @@ wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/we
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
 
-wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O Caddyfile https://raw.githubusercontent.com/GuNanHai/offlineDown/master/Caddyfile
 
 
@@ -22,6 +21,10 @@ wget -O sshd_config https://raw.githubusercontent.com/GuNanHai/offlineDown/maste
 wget -O 50-default.conf https://raw.githubusercontent.com/GuNanHai/offlineDown/master/systemInitConf/50-default.conf
 
 
+curl -sSL https://dl.cloudsmith.io/public/caddy/stable/gpg.key | gpg --dearmor > /usr/share/keyrings/caddy.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/caddy.gpg] https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version main" > /etc/apt/sources.list.d/caddy.list
+sudo apt update
+apt install caddy
 
 sudo apt-get update
 sudo apt-get -y install zip
@@ -62,17 +65,17 @@ unzip aria2c.zip
 mv .aria2 ~/
 rm aria2c.zip
 
-unzip caddy.zip
-mv caddy /usr/local/bin/
-mv Caddyfile /usr/local/bin/
-rm caddy.zip
-
 
 mv aria2.service /etc/systemd/system/aria2.service
 systemctl enable aria2.service && systemctl start aria2.service
 
-ulimit -n 8192
-caddy -conf /usr/local/bin/Caddyfile  & disown
+mv Caddyfile /etc/caddy/Caddyfile
+systemctl restart caddy
+
+
+
+
+
 
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 mv config.json /usr/local/etc/xray/config.json
